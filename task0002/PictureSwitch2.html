@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bw&xx</title>
+    <style>
+        .img-box{
+            float: left;
+            width: 45%;
+            height:55%;
+            margin-top: 10%;
+            margin-bottom: auto;
+            margin-left: 20%;
+            margin-right: auto;
+            z-index: 2;
+        }
+        .img-box img{
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            top: 150px;
+            left: 270px;
+            z-index: 1;
+            opacity: 1;
+            display: block;
+        }
+        .btn-box{
+            float: right;
+            width: 20%;
+            height: 50%;
+            margin-top:8%;
+            margin-right: 40%;
+        }
+        .btn-box button{
+            width: 240px;
+            height: 49px;
+            margin-left: 60%;
+            margin-right: auto;
+            margin-top: 5%;
+            margin-bottom: 15%;
+            border-radius: 5px;
+            font-size: 35px;
+            outline: none;
+
+        }
+        .btn-box button:hover{
+            color: #f8fffe;
+        }
+        body{
+            background: url("images/bw-bg.png") no-repeat center top
+        }
+        .btnbw{
+            background: url("images/btn-blue.png")
+        }
+        .btnxx{
+
+            background:url("images/btn-gray.png")
+        }
+    </style>
+</head>
+<body id="background">
+<div class="img-box">
+    <img id="pic" src="images/bw.png" class="img">
+</div>
+<div class="btn-box">
+    <button id="bw" class="btnbw" style="color: #000000">巴卫</button>
+    <button id="xx" class="btnxx" style="color: #00c1b6">小新</button>
+</div>
+
+<script>
+    var btn1=document.getElementById("bw")
+    var btn2=document.getElementById("xx")
+    var bgd=document.getElementById("background")
+    var img=document.getElementById("pic")
+
+    btn1.onclick=function(){
+        bgd.style.backgroundImage="url(images/bw-bg.png)";
+        img.setAttribute("src","images/bw.png");
+        btn1.style.backgroundImage="url(images/btn-blue.png)";
+        btn2.style.backgroundImage="url(images/btn-gray.png)";
+        btn1.style.color="#000000";
+        btn2.style.color="#00c1b6";
+    }
+    btn2.onclick=function(){
+        bgd.style.backgroundImage="url(images/xx-bg.png)";
+        img.setAttribute("src","images/xx.png");
+        btn1.style.backgroundImage="url(images/btn-gray.png)";
+        btn2.style.backgroundImage="url(images/btn-blue.png)";
+        btn1.style.color="#00c1b6";
+        btn2.style.color="#000000";
+    }
+</script>
+</body>
+</html>

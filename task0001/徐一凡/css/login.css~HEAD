@@ -2,7 +2,7 @@ body,html{
     height: 100%;
     margin: 0;}
 body{
-    background: url("../images/ace.jpg");
+    background-image: url("../images/ace.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -32,7 +32,4 @@ input{
 button{
     height: 30px;
     width: 80px;
-
-body,html{
-    height: 100%;
-    margin: 0;}
+}
